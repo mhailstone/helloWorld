@@ -1,0 +1,8 @@
+FROM python:2.7
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+RUN curl -sSL https://get.docker.com/ | sh
+
+COPY . /usr/src/app
