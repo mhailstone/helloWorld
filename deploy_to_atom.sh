@@ -16,4 +16,6 @@ kubectl rolling-update hello-world-controller --image=hub-tmp.byu.edu/jgubler/he
 kubectl create -f rc.yml
 kubectl create -f svc.yml
 
+rm rc.yml
+rm svc.yml
 EOF
