@@ -15,7 +15,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: hub-tmp.byu.edu/jgubler/hello-world:latest
+      - image: hubtmp.byu.edu/jgubler/hello-world:latest
         imagePullPolicy: Never
         name: hello-world
         ports:

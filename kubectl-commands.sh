@@ -1,6 +1,6 @@
 #!/bin/bash
 
-kubectl rolling-update hello-world-controller --image=hub-tmp.byu.edu/jgubler/hello-world:latest
+kubectl rolling-update hello-world-controller --image=hubtmp.byu.edu/jgubler/hello-world:latest
 kubectl create -f rc.yml
 kubectl create -f svc.yml
 
