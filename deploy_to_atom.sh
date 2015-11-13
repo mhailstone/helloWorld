@@ -11,4 +11,4 @@ scp -i ~/.ssh/id_codeship_rsa -P 22222 -o StrictHostKeyChecking=no kubectl-comma
 ssh -i ~/.ssh/id_codeship_rsa -p 22222 -o StrictHostKeyChecking=no adm.mdh26@tabura.byu.edu "scp -i ~/.ssh/codeship_rsa rc.yml dockeru@atom1-prd.byu.edu:"
 ssh -i ~/.ssh/id_codeship_rsa -p 22222 -o StrictHostKeyChecking=no adm.mdh26@tabura.byu.edu "scp -i ~/.ssh/codeship_rsa svc.yml dockeru@atom1-prd.byu.edu:"
 ssh -i ~/.ssh/id_codeship_rsa -p 22222 -o StrictHostKeyChecking=no adm.mdh26@tabura.byu.edu "scp -i ~/.ssh/codeship_rsa kubectl-commands.sh dockeru@atom1-prd.byu.edu:"
-ssh -i ~/.ssh/id_codeship_rsa -p 22222 -o StrictHostKeyChecking=no adm.mdh26@tabura.byu.edu 'ssh -i ~/.ssh/codeship_rsa dockeru@atom1-prd.byu.edu "./kubectl-commands.sh"'
+ssh -i ~/.ssh/id_codeship_rsa -p 22222 -o StrictHostKeyChecking=no adm.mdh26@tabura.byu.edu 'ssh -i ~/.ssh/codeship_rsa dockeru@atom1-prd.byu.edu "chmod 775 kubectl-commands.sh && ./kubectl-commands.sh"'
