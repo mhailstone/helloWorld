@@ -1,6 +1,7 @@
 codeship_pipeline:
   build:
+    image: hubtmp.byu.edu/codeship/pythonbase
     dockerfile_path: Dockerfile-Codeship
   encrypted_env_file: secrets.env.encrypted
-  encrypted_dockercfg_path: dockercfg.encrypted
   add_docker: true
+  cached: true

@@ -1,4 +1,6 @@
 - service: codeship_pipeline
   command: ./build_push_image.sh
+  encrypted_dockercfg_path: dockercfg.encrypted
 - service: codeship_pipeline
   command: ./deploy_to_atom.sh
+  encrypted_dockercfg_path: dockercfg.encrypted
