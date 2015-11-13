@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - image: hubtmp.byu.edu/jgubler/hello-world:latest
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         name: hello-world
         ports:
         - containerPort: 80
