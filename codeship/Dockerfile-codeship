@@ -1,0 +1,3 @@
+FROM hubtmp.byu.edu/codeship/python-kubectl-base:latest
+
+COPY . /usr/src/app

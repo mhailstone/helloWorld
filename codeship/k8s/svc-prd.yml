@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: helloworld
+    environment: prd
+  name: helloworld-prd
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    app: helloworld
+    environment: prd
+  type: LoadBalancer

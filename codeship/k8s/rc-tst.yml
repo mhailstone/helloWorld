@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    app: helloworld
+    environment: tst
+  name: helloworld-tst-controller
+spec:
+  replicas: 2
+  selector:
+    app: helloworld
+    environment: tst
+    deployment: first
+  template:
+    metadata:
+      labels:
+        app: helloworld
+        environment: tst
+        deployment: first
+    spec:
+      containers:
+      - image: hubtmp.byu.edu/mhailstone/helloworld
+        imagePullPolicy: Always
+        name: helloworld
+        ports:
+        - containerPort: 80
+          protocol: TCP
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+      - name: hubtmp-byu-edu-dockercfg
+      restartPolicy: Always
